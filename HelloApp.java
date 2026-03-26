@@ -1,10 +1,13 @@
 public class HelloApp {
 
-    // Main method - entry point of the program
     public static void main(String[] args) {
 
-        // Printing Hello World to the console
-        System.out.println("Hello World");
+        if (args.length > 0) {
+            System.out.println("Hello " + args[0]);
+        } 
+        else {
+            System.out.println("Please provide your name as a command-line argument.");
+        }
 
     }
 }
