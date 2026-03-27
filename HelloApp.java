@@ -2,12 +2,16 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
+        String name;
+
+        // Check if a name is passed as argument
         if (args.length > 0) {
-            System.out.println("Hello " + args[0]);
-        } 
-        else {
-            System.out.println("Please provide your name as a command-line argument.");
+            name = args[0];
+        } else {
+            name = "World"; // default value
         }
 
+        // Display greeting
+        System.out.println("Hello, " + name + "!");
     }
 }
