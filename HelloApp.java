@@ -1,17 +1,21 @@
-public class HelloApp {
-
+public class HelloWorld {
     public static void main(String[] args) {
 
-        String name;
-
-        // Check if a name is passed as argument
-        if (args.length > 0) {
-            name = args[0];
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
         } else {
-            name = "World"; // default value
-        }
+            System.out.print("Hello, ");
+            
+            for (int i = 0; i < args.length; i++) {
+                System.out.print(args[i]);
 
-        // Display greeting
-        System.out.println("Hello, " + name + "!");
+                // Add comma between names except last
+                if (i < args.length - 1) {
+                    System.out.print(", ");
+                }
+            }
+
+            System.out.println("!");
+        }
     }
 }
