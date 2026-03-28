@@ -1,22 +1,19 @@
 public class HelloApp {
     public static void main(String[] args) {
 
-        // If no arguments → default greeting
-        if (args.length == 0) {
-            System.out.println("Hello, World!");
+        String greeting;
+
+        // Check if arguments are provided
+        if (args.length > 0) {
+            // Join all names with comma and space
+            String names = String.join(", ", args);
+            greeting = "Hello, " + names + "!";
         } else {
-            String result = "";
-
-            // Enhanced for loop to combine names
-            for (String name : args) {
-                result += name + ", ";
-            }
-
-            // Remove trailing ", " using substring
-            result = result.substring(0, result.length() - 2);
-
-            // Print final greeting
-            System.out.println("Hello, " + result + "!");
+            // Default case
+            greeting = "Hello, World!";
         }
+
+        // Print the greeting
+        System.out.println(greeting);
     }
 }
